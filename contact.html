@@ -2,8 +2,8 @@
 <!--
 Name: Clif Reichenborn
 Date Created: 8/20/2021
-Restaurant Site Part:3-Homepage
-Most recent revision:9/5/2021
+Restaurant Site Part:1-Contact Us page
+Most recent revision:
 -->
 <html>
 	<head>
@@ -12,9 +12,6 @@ Most recent revision:9/5/2021
 		</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, intitial-scale=1, shrink-to-fit=no">
-		
-		<!--Bootstrap Icons-->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 		<!--Google font Kaisei Decol-serif-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,31 +20,11 @@ Most recent revision:9/5/2021
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<!--External styles-->
 		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
-		
 	</head>
 	<style>
 	<!-- I cannot get the pseudoclass- required to style the label with text input that is required-->
 
 	</style>
-	<script>
-	function validateForm() {
-	
-		var notBlankName = document.forms["contact"]["name"].value;
-		var notBlankEmail = document.forms["contact"]["email"].value;
-		var notBlankPhone = document.forms["contact"]["phone"].value;
-		if(notBlankName == ""){
-				document.getElementById("nameRequired").innerText = "Your name is a requried field.";
-				
-		}
-		if(notBlankEmail == ""){
-			document.getElementById("emailRequired").innerText = "Your email is a requried field.";
-		}
-		if(notBlankPhone == ""){
-			document.getElementById("phoneRequired").innerText = "Your phone number is a requried field.";
-		}
-		return false;
-		}
-</script>
 <body>
 	<header>
 	<h1><strong>Contact Us at Down Well Diner</strong><h1>
@@ -55,29 +32,20 @@ Most recent revision:9/5/2021
 <main>
 	<br />
 	<nav>
-			<a class="btn badge-pill bi bi-house-fill" href="index.html"></a>
+			<a class="btn badge-pill" href="index.html">Home</a>
 			<a class="btn badge-pill" href="menu.html">Menu</a>
 			<a class="btn badge-pill" href="contact.html">Contact Me</a>
 	</nav>
 <br />
 	
 	<!--Form Start-->
-	<form action="submit.html" onsubmit="return validateForm();" name="contact" method="POST">
+	<form action="submit.html" method="POST">
 	<!--Text forms for name,email, and phone#-->
-	<div class="form-group">
-	<label for="name"><strong>Name:</strong></label>
-		<input type="text" class="form-control" id="name" name="name" />
-			<p><span id="nameRequired"></span></p><br /><!--If name is empty display required alert-->
-	<label for="email"><strong>E-mail:</strong></label>
-		<input type="text" class="form-control" id="email" name="email"  />
-		<p><span id="emailRequired"></span></p><br /><!--If email is empty display required alert-->
-	<label for="phone"><strong>Phone Number:</strong></label>
-		<input type="text" class="form-control" id="phone" name="phone"  />
-		<p><span id="phoneRequired"></span></p><br /><!--If phone is empty display required alert-->
-	</div>
-	
+	<label for="name"><strong>Name:</strong></label><input type="text" id="name" name="name" required /><br /><br />
+	<label for="email"><strong>E-mail:</strong></label><input type="text" id="email" name="email" required /><br /><br />
+	<label for="phone"><strong>Phone Number:</strong></label><input type="text" id="phone" name="phone" required /><br /><br />
+
 	<!--Reason for inquiry drop-down-->
-	<div class="form-group">
 	<label for="inquiry">Reason for Inquiry:</label>
 	<select id="inquiry" name="inquiry">
 		<option value="default" selected>Catering</option>
@@ -85,31 +53,27 @@ Most recent revision:9/5/2021
         <option value="feeback">Feedback</option>
         <option value="other">Other</option>
     </select>
-	</div>
 	<br /><br />
 	
 	<!--Addition Info textarea-->
-	<div class="form-group">
 <label for="info">Additional Information:</label>
 	<textarea id="info" name="info"></textarea><br /><br />
-	</div>
+
 	<!--Previous customer prompt-->
-	<div class="form-group">
 <label for="previous">Have you been to Down Well Diner before?:</label>	
 	<input type="radio" id="choice1" name="previous" value="no"  /><label for="choice1">No</label>
     <input type="radio" id="choice2" name="previous" value="yes" /><label for="choice2">Yes</label><br /><br />
-	</div>
+	
 	<!--Best time to call contact customer-->
-	<div class="form-group">
 <label for="contact">Best days to contact you:</label>
 	<input type="checkbox" id="monday" name="contact" value="M" checked/><label>M</label>
     <input type="checkbox" id="tuesday" name="contact" value="T" checked/><label>T</label>
     <input type="checkbox" id="wednesday" name="contact" value="W"checked/><label>W</label>
 	<input type="checkbox" id="thursday" name="contact" value="Th"checked/><label>Th</label>
 	<input type="checkbox" id="friday" name="contact" value="F"checked/><label>F</label><br /><br />
-	</div>
+	
 	<!-- Submit form and send request to server-->
-	<input type="submit" class="btn badge-pill" name="request" value="Send Request" />
+	<input class="btn badge-pill" type="submit" name="request" value="Send Request" />
 </form>
 <br />
 <hr />
@@ -121,8 +85,7 @@ Most recent revision:9/5/2021
 
 <!--popper.js and jQuery frameworks-->
 	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-	 <script type = "text/Javascript" src="retaurant_pt3.js></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
