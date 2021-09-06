@@ -2,52 +2,168 @@
 <!--
 Name: Clif Reichenborn
 Date Created: 8/20/2021
-Restaurant Site Part:1-Homepage
-Most recent revision:
+Restaurant Site Part:3-Homepage
+Most recent revision:9/5/2021
 -->
-<html>
+<html lang="en">
 	<head>
 		<title>
 		Down Well Diner Home
 		</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, intitial-scale=1, shrink-to-fit=no">
+		
+		<!--Bootstrap Icons-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+		<!--Google font Kaisei Decol-serif-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+		<!--Navigation bar badge pill and other CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+		<!--My External styles-->
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+		
+		
+
 	</head>
+	<style>
+	p, h3{
+		text-align:center;
+		
+	}
+	.clear-float{
+			clear:both;
+		}
+	.jumbotron{
+		background-color: #f0cea0ff;
+	}
+	.row{
+	background-color: #f0cea0ff;
 	
-<body>
-	<header>
-	<h1><strong>Down Well Diner</strong></h1>
-	</header>
-<main>
-	<hr />
-	<!--Navigation hub-->
+	}
+
+	</style>
+	<script>function enableJavascript(){
+	 alert("This site is best viewed with Javascript enabled.");
+	
+}</script>
+	<body onload = "enableJavascript();">
+	
+		<div class="container-fluid"><!-- All page content should be inside this .container div -->
+            <header class="jumbotron jumbotron-fluid">
+                <h1 style="font-size:3em; text-align:center";>Down Well Diner</h1> 
+                <h4 class="mt-5">Now serving at our second location in Stull, KS!</h3>
+				<h5>Down Well Diner means delectible--done well!</h6>
+            </header>
+
+	
+	<main>
+
+	<!--Navigation hub <i class="bi bi-house-fill"></i>-->
+
 	<nav>
-	<a href="index.html">Home</a>
-	<a href="menu.html">Menu</a>
-	<a href="contact.html">Contact Us</a>
+			<a class="btn badge-pill bi bi-house-fill" href="index.html"></a>
+			<a class="btn badge-pill" href="menu.html">Menu</a>
+			<a class="btn badge-pill" href="contact.html">Contact Us</a>
 	</nav>
+	<div class="container-fluid">
+	<div class="row" >
+                <div class="col-lg-3 col-md">
+                    <!-- div for picture -->
+                    <img src="images/stairs2.jpg"  alt="Descend unto delish at Down Well Diner!" class="img-fluid" />
+					
+			   </div>
+                
+                <div class="col-lg-6 col-md" style="color: #29335cff";>
+                    <!-- div for text -->
+					<h3><strong><em>What</em> is the Down Well Diner?:</strong></h3><br />
+                    <p>The Down Well Diner is the premier midwest brunch spot to receive scratch-made, gourmet comfort food
+						served to you over 100 feet underground! Located underneath gorgeous downtown Greensburg, Kansas at the bottom of the worlds largest man made well,
+						we create the most savory and satisfying dishes reminiscent of down home Americana diners.<br /></p>
+                    <p>Open for Breakfast and Lunch 7am-2pm, Wed-Sun.<br /></p>
+                </div>
+				<div class="col-lg-3 col-md">
+                    <!-- div for picture -->
+                   
+					<img src="images/dining2.jpg"  alt="Experience brunch at Down Well Diner." class="img-fluid" />
+			   </div>
+				
+      </div> <!-- End of .row div -->
+	  </div>
+
+	<!--Restaurant Carousel here-->
 	
-	<hr />
-	<!--Restaurant pic here-->
-	<img src="images/stairs2.jpg" alt="Descend unto delish at Down Well Diner!" width="400"/>
-	<img src="images/dining2.jpg" alt="Breakfast and Lunch at Down Well Diner." width="400"/>
-	<!--Description below-->
+		<div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="background-color:#f0cea0ff";>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/apricot-dumplings.jpg" class="rounded" alt="Experience brunch at Down Well Diner." width="100%" height="100%" preserveAspectRatio="xMidYMid slice" class="img-fluid"></img>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>A new season of flavor.</h1>
+            <p>Try Down Well Diner's new seasonal menu--featuring apricot dumplings!</p>
+            <p><a class="btn btn-lg btn-primary" href="menu.html">Seasonal Menu</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/spiralstairs.jpg" class="rounded" alt="Experience brunch at Down Well Diner." width="100%" height="100%" preserveAspectRatio="xMidYMid slice" class="img-fluid"></img>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Down Well Diner is expanding!</h1>
+            <p>Come experience the unique ambience at our second location--Baphomet's Bistro!</p>
+            <p><a class="btn btn-lg btn-primary" href="contact.html">Contact us to learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/sgbrew.jpg" class="rounded" alt="Enjoy the drink of the month: SG Brew!" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" class="img-fluid"></img>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Down Well Diner's drink of the month: SG Brew!</h1>
+            <p>Brewed with Bulgarian hops and expertly infused with 100% organically-expressed software developer tears.</p>
+            <p><a class="btn btn-lg btn-primary" href="menu.html">Beverages</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
 	
-	<h2><strong><em>What</em> is the Down Well Diner?:</strong></h2><br />
-	<article>
-	<p>The Down Well Diner is the premeire midwest brunch spot to receive scratch-made, gourmet comfort food
-served to you over 100 feet underground! Located underneath gorgeous downtown Greensburg, Kansas at the bottom of the worlds largest man made well,
-we create the most savory and satisfying dishes reminiscent of down home Americana diners. Open for Breakfast and Lunch 7am-2pm, Wed-Sun.<br />
-	<em>Down Well Diner is delicious done well!</em>
- 	</p>
-	</article>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div><!--End Carousel-->
+	</div>
 	
-</main>
+	
+
+<!--popper.js and jQuery frameworks-->
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+	 
+	 </main>
 </body>
-<br />
-<hr />
+
+
+
 	<footer>
 		<p>Underneath 316 S. Sycamore, Greensburg, Kansas, 67054<br />
 		620-244-9355</p>
 	</footer>
+<br />
 
 
 </html>

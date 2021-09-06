@@ -2,62 +2,207 @@
 <!--
 Name: Clif Reichenborn
 Date Created: 8/20/2021
-Restaurant Site Part:1-Menu page
-Most recent revision:
+Restaurant Site Part:3-Homepage
+Most recent revision:9/5/2021
 -->
 <html>
 	<head>
 		<title>
 		Down Well Diner Menu
 		</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, intitial-scale=1, shrink-to-fit=no">
+		<
+		<!--Bootstrap Icons-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+		<!--Google font Kaisei Decol-serif-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+		<!--Navigation bar badge pill-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<!--External styles-->
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
 	</head>
-	
+<style>
+	caption{
+		text-align: center;
+		text-decoration: underline;
+		text-decoration: bold;
+		caption-side: top;
+		font-weight: bold;
+		font-size: 2em;
+		color: #db2b39ff;
+		
+		}
+	table, th, td{
+		
+		border: 1px solid #0d1f2d;
+		border-collapse: collapse;
+		padding: 5px 10px;
+		}
+	<!--Setting the horizontal margins 
+	to auto is the most common method to center content blocks horizontally in CSS-->
+	table {
+		
+		table-layout:auto; width:90%;
+		margin: auto;
+		}
+	tr{
+		height: 30px;
+		}
+	th{
+		background-color: #29335cff;
+			color:#f2eded;
+			text-decoration: bold;
+			border-collapse: collapse;
+		}
+	tbody tr:nth-child(odd){
+		background-color: #e4c3ad;
+		color: #534d41ff;
+		}
+	td:nth-child(1){
+		font-size 1.5em;
+		font-weight: bold;
+	}
+</style>
+
 <body>
 	<header>
 	<h1><strong>Down Well Diner's Menu</strong></h1>
 	</header>
 <main>
-	<hr />
 	<!--Navigation hub-->
-	<a href="index.html">Home</a>
-	<a href="menu.html">Menu</a>
-	<a href="contact.html">Contact Us</a>
-	
-	<hr />
+<br />
+	<nav>
+			<a class="btn badge-pill bi bi-house-fill" href="index.html"></a>
+			<a class="btn badge-pill" href="menu.html">Menu</a>
+			<a class="btn badge-pill" href="contact.html">Contact Me</a>
+	</nav>
+<br />
 	
 	<!--Menu start-->
-	<h2><u>Down Well Diner Breakfast</u></h2> 
-<dl> 
-    <dt><strong><em>Banana Bread French Toast</strong></em></dt> 
-    <dd>– Banana bread battered & topped with candied apples, pecans, apple butter,
-		Whipped cream & vanilla molasses syrup...<sup><strong>$10.99</strong></sup></dd> <br />
-    <dt><strong><em>Clif's Benny</strong></em></dt> 
-    <dd>– Hand whipped Hollandaise sauce over two poached eggs, maple pepper bacon, avocado on top English
-		muffin...<sup><strong>$10.49</strong></dd> <br />
-    <dt><strong><em>The Brutus</strong></em> (named after the Diner's own sponsored excavator)</dt> 
-	<dd>– A tower of hash browns, caramelized onions, Chicken Fried Steak, sausage gravy & 2 eggs...<sup><strong>$16.49</strong></sup></dd><br /> 
-</dl>
-
-<!--Lunch-->
-	<h2><u>Down Well Diner Lunch</u></h2>
-<dl> 
-    <dt><strong><em>Turkey Focaccia</strong></em></dt> 
-    <dd>- House baked basil & sun-dried tomato focaccia bread with honey roasted turkey, spinach,
-avocado, dill Havarti cheese, jalapeno bacon & honey mustard...<sup><strong>$12.99</strong></sup></dd> <br />
-    <dt><strong><em>Bat Out of Well Meatloaf</strong></em></dt> 
-    <dd>- A mix of peppers, onions, cheddar mixed in fresh beef, topped with jalapeno bacon &
-chili sauce. <br/>Served with mashed potatoes, gravy & skillet green beans...<sup><strong>$13.99</strong></sup></dd> <br />
-    <dt><strong><em>Chicken Fried Steak</strong></em></dt> 
-	<dd>– Hand breaded to order, never frozen. <br />Served with mashed potatoes, gravy & skillet green beans...<sup><strong>$13.99</strong></sup></dd> 
+<!--Breakfast table start-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-8 mx-auto">
+<table>
+		 <caption>Down Well Diner Breakfast</caption>
+		 <thead>
+		 <tr>
+			<th style="column-span: 2;">Meal</th>
+			<th>Description</th>
+			<th>Price</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>Banana Bread French Toast</td>
+			<td>Banana bread battered & topped with candied apples, pecans, apple butter,
+		Whipped cream & vanilla molasses syrup.</td>
+			<td>$10.99</td>
+		</tr>
+		<tr>
+			<td>Clif's Benny</td>
+			<td>Hand whipped Hollandaise sauce over two poached eggs, maple pepper bacon, avocado on top English
+		muffin.</td>
+			<td>$10.49</td>
+		</tr>
+		<tr>
+			<td>The Brutus (named after the Diner's own sponsored excavator)</td>
+			<td>A tower of hash browns, caramelized onions, Chicken Fried Steak, sausage gravy & 2 eggs.</td>
+			<td>$16.49</td>
+		</tr>
+		</tbody>
+	</table>
 	<br />
-</dl>
-
+		</div>
+	</div>
+</div>
+	<!--Lunch table start-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-8 mx-auto">
+	<table>
+		 <caption>Down Well Diner Lunch</caption>
+		 <thead>
+		 <tr>
+			<th style="column-span: 2;">Meal</th>
+			<th>Description</th>
+			<th>Price</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>Turkey Foccacia</td>
+			<td>House baked basil & sun-dried tomato focaccia bread with honey roasted turkey, spinach, avocado, dill Havarti cheese, jalapeno bacon & honey mustard.</td>
+			<td>$12.99</td>
+		</tr>
+		<tr>
+			<td>Bat Out of Well Meatloaf</td>
+			<td>A mix of peppers, onions, cheddar mixed in fresh beef, topped with jalapeno bacon & chili sauce.
+Served with mashed potatoes, gravy & skillet green beans.</td>
+			<td>$13.99</td>
+		</tr>
+		<tr>
+			<td>Chicken Fried Steak</td>
+			<td>Hand breaded to order, never frozen.</td>
+			<td>$13.99</td>
+		</tr>
+		</tbody>
+	</table>
+			</div>
+	</div>
+</div>
 <br />
+<!--Beverages table start-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2 mx-auto">
+	<table>
+		 <caption>Beverages</caption>
+		 <thead>
+		 <tr>
+			<th style="column-span: 2;">Beverages</th>
+			<th>Price</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>Root Beer</td>
+			<td>$3.00</td>
+			
+		</tr>
+		<tr>
+			<td>Bottled Water</td>
+			<td>$1.25</td>
+		</tr>
+		<tr>
+			<td>Lemonade</td>
+			<td>$1.00</td>
+		</tr>
+			<tr>
+			<td>Iced Tea</td>
+			<td>$1.25</td>
+		</tr>
+		</tbody>
+	</table>
+		</div>
+	</div>
+</div>
+
 <hr />
 	<footer>
 		<p>Underneath 316 S. Sycamore, Greensburg, Kansas, 67054<br />
 		620-244-9355</p>
 	</footer>
 </main>
+
+
+<!--popper.js and jQuery frameworks-->
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+	
 </body>
 </html>
